@@ -6,12 +6,11 @@ The project allows you to make use of a pre-trained model to get information abo
 ### Tasks
 
 The project goal is to operationalize a machine learning microservice using [kubernetes](https://kubernetes.io/)
-* Complete the Dockerfile to containerize the application
-* Deploy the containerized application using Docker and make a prediction
-* Improve the log statements in the source code for this application
-* Configure Kubernetes and create a Kubernetes cluster
-* Deploy a container using Kubernetes and make a prediction
-* Upload a complete Github repo with CircleCI to indicate that your code has been tested
+
+Throughout the project I was able to containerize a flask app, making easier to deploy the microservice, 
+after that making available the image through docker hub allowed me to create a kubernetes cluster and deploy the image on a pod inside,
+aplying these techniques to the project helped me understand concepts about microservices, what factors are important when deploying them and 
+the place for tools like docker and kubernetes 
 
 ## Setup
 
@@ -30,8 +29,10 @@ The project goal is to operationalize a machine learning microservice using [kub
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
 ### Kubernetes Steps
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+ 
+ 1. Create an aws ecs cluster o user minikube locally
+    minikube start
+ 2. Run the Docker Hub container with kubernetes
+    kubectl create deploy project5 --image=[DOCKERHUB_ID]/project5
+ 3. Forward the container port to the host
+    kubectl port-forward [POD_NAME] --address 0.0.0.0 80:80
