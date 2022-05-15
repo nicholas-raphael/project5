@@ -1,0 +1,26 @@
+(.devops) ➜  project-ml-microservice-kubernetes git:(master) ✗ ./upload_docker.sh
+Docker ID and Image: techdemowz/project5
+Authenticating with existing credentials...
+Login Succeeded
+
+Logging in with your password grants your terminal complete access to your account. 
+For better security, log in with a limited-privilege personal access token. Learn more at https://docs.docker.com/go/access-tokens/
+(.devops) ➜  project-ml-microservice-kubernetes git:(master) ✗ kubectl get pod
+NAME                        READY   STATUS    RESTARTS   AGE
+project5-796955cd89-p4wj7   1/1     Running   0          72s
+(.devops) ➜  project-ml-microservice-kubernetes git:(master) ✗ ./run_kubernetes.sh
+error: failed to create deployment: deployments.apps "project5" already exists
+NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/project5   1/1     1            1           76s
+
+NAME                                  DESIRED   CURRENT   READY   AGE
+replicaset.apps/project5-796955cd89   1         1         1       76s
+
+NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   6m37s
+
+NAME                            READY   STATUS    RESTARTS   AGE
+pod/project5-796955cd89-p4wj7   1/1     Running   0          76s
+Forwarding from 0.0.0.0:80 -> 80
+Handling connection for 80
+Handling connection for 80
