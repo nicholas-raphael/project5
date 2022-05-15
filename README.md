@@ -1,4 +1,4 @@
-[!CircleCI](https://circleci.com/gh/nicholas-raphael/project5/tree/master.svg?style=svg)](https://circleci.com/gh/nicholas-raphael project5/tree/master)
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://circleci.com/gh/nicholas-raphael/project5/tree/master)
 
 ## Project Overview
 
