@@ -24,3 +24,11 @@ pod/project5-796955cd89-p4wj7   1/1     Running   0          76s
 Forwarding from 0.0.0.0:80 -> 80
 Handling connection for 80
 Handling connection for 80
+
+➜  project-ml-microservice-kubernetes git:(master) ✗ ./make_prediction.sh 
+Port: 80
+{
+  "prediction": [
+    20.35373177134412
+  ]
+}
